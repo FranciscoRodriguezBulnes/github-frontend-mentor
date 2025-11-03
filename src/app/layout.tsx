@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
-const spaceGrotesk = Space_Grotesk({
+// const spaceGrotesk = Space_Grotesk({
+//   subsets: ["latin"],
+// });
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
@@ -29,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>
+      <body className={robotoMono.className}>
         <div className="grid place-content-center min-h-screen bg-blue-950">
           <div className='sm:w-[500px] md:w-[600px] lg:w-[700px]'>
             <Navbar />

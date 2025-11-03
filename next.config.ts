@@ -5,8 +5,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
-  /* otras opciones de configuración aquí */
-};
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        // port: '',
+        // pathname: '/**',
+      },
+   ],
+  },
+}
 
 export default nextConfig;
 
